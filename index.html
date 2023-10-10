@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MoviesBot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="MobileOptimized" content="176" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="robots" content="noindex, nofollow" />
+    <script src="https://tg.dev/js/telegram-web-app.js?37"></script>
+    <script>
+        function setThemeClass() {
+            document.documentElement.className = Telegram.WebApp.colorScheme;
+        }
+        Telegram.WebApp.onEvent('themeChanged', setThemeClass);
+        setThemeClass();
+    </script>
+    <link href="/style.css?20" rel="stylesheet">
+</head>
+
+<body style="display:none">
+    <section id="menu" class="movie-page movie-items">
+    </section>
+    <section class="movie-page movie-order-overview">
+            <div class="movie-detail-item">
+                <img id="poster" src="" class="movie-detail-poster">
+                <div class="movie-detail-container">
+                    <div id="detail">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="chip-group" id="chips">
+                </div>
+            </div>
+            <div id="seats" class="movie-seats">
+            </div>
+            <p class="centered-text">Please select a seat from above</p>
+    </section>
+    <div class="movie-status-wrap">
+        <div class="movie-status js-status"></div>
+    </div>
+    <script src="https://tg.dev/js/jquery.min.js"></script>
+    <script src="/main.js?31"></script>
+    <script>
+
+        Movie.init({
+            "apiUrl": "https://tele.michaellina992813.workers.dev/invoice",
+            "mode": null,
+            "userId": 0,
+            "userHash": null
+        });
+
+    </script>
+</body>
+
+</html>
